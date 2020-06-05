@@ -1,9 +1,9 @@
-power of two
-//first option
+#power of two
+##first option
    def isPowerOfTwo(self, n: int) -> bool:
      return n > 0 and not (n & n-1)
 
-//second option
+##second option
     def isPowerOfTwo(self, n: int) -> bool:
         if n <= 0:
             return False
