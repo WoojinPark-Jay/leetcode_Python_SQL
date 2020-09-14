@@ -1,4 +1,4 @@
-# leetcode_python
+# leetcode_Python_SQL
 Leetcode Python & SQL Solution. Daily Coding for improving problem solving skills and preparing for Data Scientist interview
 
 # Overview
