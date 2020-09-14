@@ -1,5 +1,5 @@
 # leetcode_python
-Leetcode Python Solution. Daily Coding for improving problem solving skills and preparing for Data Scientist interview
+Leetcode Python & SQL Solution. Daily Coding for improving problem solving skills and preparing for Data Scientist interview
 
 # Overview
 - This could be a daily coding practice place for me.
