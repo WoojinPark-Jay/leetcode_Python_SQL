@@ -24,17 +24,17 @@ SELECT * FROM Customers
 WHERE CustomerName NOT LIKE "A%"L
 ```
 
-##The SQL INSERT INTO Statement
+## The SQL INSERT INTO Statement
 The INSERT INTO statement is used to insert new records in a table.
 It is possible to write the INSERT INTO statement in two ways:
 
-###Syntax 1
+### Syntax 1
 Specify both the column names and the values to be inserted:
 
 INSERT INTO table_name (column1, column2, column3, ...)
 VALUES (value1, value2, value3, ...);
 
-###Syntax 2
+### Syntax 2
 If you insert values for ALL the columns of the table, you can omit the column names.
 However, the order of the values must be in the same order as the columns in the table:
 
