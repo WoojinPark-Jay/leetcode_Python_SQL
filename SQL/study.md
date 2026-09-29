@@ -82,3 +82,27 @@ DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 DROP TABLE Customers;
 ```
 
+
+## SELECT TOP and ORDER BY
+Add the ORDER BY keyword when you want to sort the result, and return the first 3 records of the sorted result.
+
+Sort the result reverse alphabetically by CustomerName, and return the first 3 records:
+Syntax
+```sql
+SELECT TOP 3 *
+FROM Customers
+ORDER BY CustomerName DESC;
+```
+
+
+## Higher Than Average
+To list all records with a higher price than average, we can use the AVG() function in a sub query:
+
+Return all products with a higher price than the average price:
+
+Syntax
+```sql
+SELECT *
+FROM PRODUCTS
+WHERE PRICE > (SELECT AVG(PRICE) FROM PRODUCTS)
+```
