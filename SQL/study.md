@@ -67,3 +67,18 @@ WHERE CustomerID = 1;
 - Note: Be careful when updating records in a table! Notice the WHERE clause in the UPDATE statement. The WHERE clause specifies which record(s) that should be updated. If you omit the WHERE clause, all records in the table will be updated!
 
 
+## The SQL DELETE Statement
+The DELETE statement is used to delete existing records in a table.
+
+
+DELETE Syntax
+```sql
+DELETE FROM table_name WHERE condition;
+
+--The following SQL deletes the customer "Alfreds Futterkiste" from the "Customers" table:
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+--To delete the table completely, use the DROP TABLE statement:
+DROP TABLE Customers;
+```
+
