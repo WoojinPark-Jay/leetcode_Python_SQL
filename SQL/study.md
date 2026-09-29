@@ -94,7 +94,6 @@ FROM Customers
 ORDER BY CustomerName DESC;
 ```
 
-
 ## Higher Than Average
 To list all records with a higher price than average, we can use the AVG() function in a sub query:
 
@@ -106,3 +105,33 @@ SELECT *
 FROM PRODUCTS
 WHERE PRICE > (SELECT AVG(PRICE) FROM PRODUCTS)
 ```
+
+
+## The SQL LIKE Operator
+To list all records with a higher price than average, we can use the AVG() function in a sub query:
+
+The LIKE operator is used in a WHERE clause to search for a specified pattern within a column's text data.
+
+There are two wildcards often used in conjunction with the LIKE operator:
+
+A percent sign % - represents zero, one, or multiple characters
+A underscore sign _ - represents a single character
+The following SQL selects all customers that starts with the letter "a":
+
+
+Select all customers that starts with the letter "a":
+Syntax
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+
+-- more practice
+select *
+from customers
+where city like 'To____' or city like 'a%'
+```
+
+
+
+
+
