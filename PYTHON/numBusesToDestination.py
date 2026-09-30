@@ -25,3 +25,26 @@ class Solution(object):
                         flag = True
 
         return min_buses_to_reach[target] if min_buses_to_reach[target] < float('inf') else -1
+
+
+
+class Solution:
+    def numBusesToDestination(self, routes, starterBus, targetBus):
+        path, travel, travelTaken, used = collections.defaultdict(set), [starterBus], 0, set()
+        for i, route in enumerate(routes):
+            for bus in route:
+                path[bus].add(i)
+        while travel:
+            new = []
+            for bus in travel:
+                if bus == targetBus:
+                    return travelTaken
+                for route in path[bus]:
+                    if route not in used:
+                        used.add(route)
+                        for nextBus in routes[route]:
+                            if nextBus != bus:
+                                new.append(nextBus)
+            travelTaken += 1
+            travel = new
+        return -1
