@@ -133,7 +133,7 @@ where city like 'To____' or city like 'a%'
 
 
 ## IN (SELECT)
-ou can also use IN with a subquery in the WHERE clause.
+You can also use IN with a subquery in the WHERE clause.
 
 With a subquery you can return all records from the main query that are present in the result of the subquery.
 
@@ -145,6 +145,15 @@ WHERE CustomerID IN (SELECT CustomerID FROM Orders);
 ```
 
 
+## NOT BETWEEN Text Values
+The following SQL selects all products with a ProductName NOT between 'Geitost' and 'Louisiana Hot Spiced Okra':
+
+Syntax
+```sql
+SELECT * FROM Products
+WHERE ProductName NOT BETWEEN 'Geitost' AND 'Louisiana Hot Spiced Okra'
+ORDER BY ProductName;
+```
 
 
 
