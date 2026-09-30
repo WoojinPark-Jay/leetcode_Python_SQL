@@ -132,6 +132,19 @@ where city like 'To____' or city like 'a%'
 ```
 
 
+## IN (SELECT)
+ou can also use IN with a subquery in the WHERE clause.
+
+With a subquery you can return all records from the main query that are present in the result of the subquery.
+
+The following SQL returns all customers who also have an order in the "Orders" table:
+Syntax
+```sql
+SELECT * FROM Customers
+WHERE CustomerID IN (SELECT CustomerID FROM Orders);
+```
+
+
 
 
 
