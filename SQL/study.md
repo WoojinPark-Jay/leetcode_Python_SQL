@@ -1,4 +1,4 @@
-# TUTORIAL
+# SQL TUTORIAL
 
 ## NOT Operator
 The NOT operator is used in the WHERE clause to return all records that DO NOT match the specified criteria. 
