@@ -4,8 +4,6 @@ WHERE author_id = viewer_id
 ORDER BY id ASC;
 
 
-
-
 -- 
 
 import pandas as pd
