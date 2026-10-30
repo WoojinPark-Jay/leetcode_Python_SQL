@@ -11,6 +11,7 @@ WHERE NOT Country = 'Spain';
 
 ```
 
+
 ## The NOT LIKE Operator
 The NOT LIKE operator is used in the WHERE clause to exclude rows that match a specified character pattern.
 
