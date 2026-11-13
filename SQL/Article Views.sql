@@ -5,7 +5,8 @@ ORDER BY id ASC;
 
 
 -- 
-#python 
+
+#python Ver
 import pandas as pd
 
     
