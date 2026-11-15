@@ -6,7 +6,7 @@ ORDER BY id ASC;
 
 -- 
 
-#python Ver
+#python Version
 import pandas as pd
 
     
