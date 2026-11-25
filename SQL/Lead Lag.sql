@@ -39,3 +39,43 @@ ORDER BY month;
 | 9월    | 200     | 150    | NULL   | 0              | 160            |
 | 10월   | 160     | 200    | 150    | 150            | 240            |
 | 11월   | 240     | 160    | 200    | 200            | 0              |
+
+
+
+SELECT
+    order_id,
+    order_date,
+    amount,
+    LAG(amount) OVER (
+        ORDER BY order_date, order_id
+    ) AS prev_amount,
+    LEAD(amount) OVER (
+        ORDER BY order_date, order_id
+    ) AS next_amount,
+    LAG(amount, 2) OVER (
+        ORDER BY order_date, order_id
+    ) AS two_orders_ago
+FROM orders
+WHERE user_id = 'A'
+ORDER BY order_date, order_id;
+
+
+WITH purchase_sequence AS (
+    SELECT
+        user_id,
+        order_id,
+        order_date,
+        LEAD(order_date) OVER (
+            PARTITION BY user_id
+            ORDER BY order_date, order_id
+        ) AS next_order_date
+    FROM orders
+)
+SELECT
+    user_id,
+    order_id,
+    order_date,
+    next_order_date,
+    next_order_date - order_date AS days_to_next_purchase
+FROM purchase_sequence
+ORDER BY user_id, order_date, order_id;
